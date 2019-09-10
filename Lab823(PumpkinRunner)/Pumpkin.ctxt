@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Pumpkin
+comment0.text=\r\n\ This\ is\ code\ written\ down\ from\ paper\ used\ in\ class.\r\n\r\n\ @author\ (Naomi\ Puchta)\r\n\ @version\ (8/23)\r\n
+comment1.params=r\ id
+comment1.target=Pumpkin(double,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Pumpkin\r\n
+comment2.params=
+comment2.target=double\ getRadius()
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

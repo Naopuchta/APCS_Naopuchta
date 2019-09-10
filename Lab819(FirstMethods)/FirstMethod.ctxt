@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=FirstMethod
+comment0.text=\r\n\ This\ is\ a\ program\ which\ will\ use\ math\ to\ find\ values\ of\ a\ and\ b\r\n\r\n\ @author\ (Naomi\ Puchta)\r\n\ @version\ (819)\r\n
+comment1.params=a\ b\ x
+comment1.target=void\ printValues(int,\ int,\ int)
+comment2.params=
+comment2.target=void\ main()
+numComments=3
