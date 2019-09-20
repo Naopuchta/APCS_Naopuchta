@@ -11,8 +11,10 @@ public class SentenceRunner
     /**
      * Constructor for objects of class SentenceRunner
      */
-    String nouns = "b,a,t";
-    
+    String[] nouns = {"bat",  "dog",  "leaf" , "rock" , "well" , "firetruck" , "cat" ,  
+        "mouse" , "dragon" , "bird" , "turtle" , "elk" , "puma" , "fossa" , "coatis" , "hyena" , "grass" , "bug" , "dirt"};
+    sub = nouns.substring(0);
+    System.out.print(sub);
     public SentenceRunner()
     {
         // initialise instance variables
