@@ -12,11 +12,9 @@ public class Runner
     /**
      * Constructor for objects of class Runner
      */
+ 
     public void Scanner()
     {
-        
-    }
-    public void Person (){
-    
+       Scanner kb = new Scanner(System.in);
     }
 }
