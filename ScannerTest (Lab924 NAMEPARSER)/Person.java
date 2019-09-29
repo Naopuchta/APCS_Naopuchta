@@ -10,12 +10,13 @@ public class Person
     // instance variables - replace the example below with your own
     // John Adams is an example text while I run through the rest of the program 
     // String fullName = "John Adams";
-    String fullName = "";
+    static String fullName;
     String fname, mname, lname;
     int si; 
     int si2;
     int checkComma;
     int format; 
+    
 
     /**
      * Constructor for objects of class Person
@@ -38,22 +39,22 @@ public class Person
             if(checkComma != -1){
                 // if there is only one comma it will follow format two
                 if(si == si2){
-                    
+                    fname = fullName.substring(0,checkComma);
                 } 
                 // of there is more than one space then it follows the first format 
                 else{
-                
+                    fname = fullName.substring(0,checkComma);
                 }
             }
             // if there are no commas then it will check for the other formats
             else{
                 // checking to see if it follows the fourth format with only one space
                 if(si == si2){
-
+                    fname = fullName.substring(0,si);
                 }
                 // if there are more than two spaces then it will do the third format 
                 else{
-
+                    fname = fullName.substring(0,si);
                 }   
             }
         }
