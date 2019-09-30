@@ -16,7 +16,7 @@ public class Person
     int si2;
     int checkComma;
     int format; 
-
+    int checkComma2;
     /**
      * Constructor for objects of class Person
      */
@@ -31,6 +31,7 @@ public class Person
         // will print a different position if there are multiple spaces 
         si2 = fullName.lastIndexOf(" ");
         checkComma = fullName.indexOf(", ");
+        checkComma2 = fullName.lastIndexOf(", ");
         // making sure that there is at least one space otherwise the program will print
         // "Incorrect Format, please try again." 
         if(si != -1){
@@ -38,22 +39,29 @@ public class Person
             if(checkComma != -1){
                 // if there is only one comma it will follow format two
                 if(si == si2){
-                    
+                    fname = fullName.substring(0,checkComma);
+                    lname = fullName.substring(checkComma + 2);
                 } 
-                // of there is more than one space then it follows the first format 
+                // of there is more than one comma then it follows the first format 
                 else{
-                
+                    fname = fullName.substring(0,checkComma);
+                    mname = fullName.substring(checkComma + 2, checkComma2);
+                    lname = fullName.substring(checkComma2 + 2);
+                    
                 }
             }
             // if there are no commas then it will check for the other formats
             else{
                 // checking to see if it follows the fourth format with only one space
                 if(si == si2){
-
+                    fname = fullName.substring(0,si);
+                    lname = fullName.substring(si + 1);
                 }
                 // if there are more than two spaces then it will do the third format 
                 else{
-
+                    fname = fullName.substring(0,si);
+                    mname = fullName.substring(si + 1, si2);
+                    lname = fullName.substring(si2 + 1);
                 }   
             }
         }
