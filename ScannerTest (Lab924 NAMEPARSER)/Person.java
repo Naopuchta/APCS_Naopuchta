@@ -16,7 +16,7 @@ public class Person
     int si2;
     int checkComma;
     int format; 
-
+    String entireName;
     int checkComma2;
 
     /**
@@ -24,60 +24,63 @@ public class Person
      */
     // this will hopefully import the name over
     public Person(String fullName){
-        parseName(fullName);
+        entireName = fullName;
+        parseName(entireName);
     }
-    
+
     public void parseName(String fullName){
         // checks to see where the spaces are 
-        si = fullName.indexOf(" ");
+        entireName = fullName;
+        si = entireName.indexOf(" ");
         // will print a different position if there are multiple spaces 
-        si2 = fullName.lastIndexOf(" ");
-        checkComma = fullName.indexOf(", ");
-        checkComma2 = fullName.lastIndexOf(", ");
+        si2 = entireName.lastIndexOf(" ");
+        checkComma = entireName.indexOf(", ");
+        checkComma2 = entireName.lastIndexOf(", ");
         // making sure that there is at least one space otherwise the program will print
         // "Incorrect Format, please try again." 
-        if(si != -1){
+        
+        // Format One "Last, First, Middle" 
+        // Format Two "Last, First"
+        // Format Three " First Middle Last"
+        // Format Four "First Last" 
+         if(si != -1){
             //checking to see if there is a comma in the string 
             if(checkComma != -1){
                 // if there is only one comma it will follow format two
                 if(si == si2){
-                    fname = fullName.substring(0,checkComma);
-
-                    lname = fullName.substring(checkComma + 2);
-
-
+                    lname = entireName.substring(0,checkComma);
+                    fname = entireName.substring(checkComma + 2);
+                    System.out.println(fname + " " + lname);
                 } 
                 // of there is more than one comma then it follows the first format 
                 else{
-                    fname = fullName.substring(0,checkComma);
-
-                    mname = fullName.substring(checkComma + 2, checkComma2);
-                    lname = fullName.substring(checkComma2 + 2);
-                    
-
+                    lname = entireName.substring(0,checkComma);
+                    fname = entireName.substring(checkComma + 2, checkComma2);
+                    mname = entireName.substring(checkComma2 + 2);
+                    System.out.println(fname + " " + mname + " " + lname);
                 }
             }
             // if there are no commas then it will check for the other formats
             else{
                 // checking to see if it follows the fourth format with only one space
                 if(si == si2){
-                    fname = fullName.substring(0,si);
-                    lname = fullName.substring(si + 1);
-
+                    fname = entireName.substring(0,si);
+                    lname = entireName.substring(si + 1);
+                    System.out.println(fname + " " + lname);
                 }
                 // if there are more than two spaces then it will do the third format 
                 else{
-                    fname = fullName.substring(0,si);
-
-                    mname = fullName.substring(si + 1, si2);
-                    lname = fullName.substring(si2 + 1);
+                    fname = entireName.substring(0,si);
+                    mname = entireName.substring(si + 1, si2);
+                    lname = entireName.substring(si2 + 1);
+                    System.out.println(fname + " " + mname + " " + lname);
 
                 }   
             }
         }
         // if it does not follow any of the formats 
         else{
-            System.out.println("Please try again. That is an incorrect format.");
+                System.out.println("Please try again. That is an incorrect format.");
         }
     }
 }
