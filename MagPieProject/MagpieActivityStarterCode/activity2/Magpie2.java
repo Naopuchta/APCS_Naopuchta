@@ -55,6 +55,15 @@ public class Magpie2
         else if(statement.indexOf("Mrs. ") >= 0){
             response = "She sounds like a good teacher.";
         }
+        if(statement.indexOf("Television") >= 0){
+            response = "Oooh! I love television."; 
+        }
+        if(statement.indexOf("Brother") >= 0){
+            response = "Tell me more about your brother."; 
+        }
+        if(statement.indexOf("Butterflies") >= 0){
+            response = "Oooh! I love butterflies."; 
+        }
         if(statement.length() == 0){
             response = "Say something, please.";
         }
