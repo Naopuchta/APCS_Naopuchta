@@ -9,6 +9,7 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 public class SortTester
 {
     // instance variables - replace the example below with your own
@@ -24,16 +25,32 @@ public class SortTester
             pick = rand.nextInt(100);
             numList.add(pick);
         }
+        System.out.println("Type B for bubbleSort, I for insertSort, and S for selectionSort");
+        Scanner kb = new Scanner(System.in);
+        String inputStr = "";
+        if(inputStr == "B"){
+            bubbleSort();
+        }
+        else if(inputStr == "I"){
+            insertSort();
+        }
+        else if(inputStr == "S"){
+            selectSort();
+        }
     }
     // this is: Bubble Sort
     public  void bubbleSort(){
         for(int i = numList.size() -1; i > 0; i--){
             for(int j = 0; j < i; j++){
                 if(numList.get(j) > numList.get(j+1)){
-                    swap(numList, j, j+1); 
+                   temp = numList.get(j);
+                   numList.set(j,j+1);
+                   numList.set(j+1,temp);
+                   //swap(numList, j, j+1); 
                 }
             }
         }
+        printList();
     }
     // this is: Insert Sort 
     public void insertSort(){
@@ -50,6 +67,7 @@ public class SortTester
                 // Swapping Code +++++++++
             }
         }
+        printList();
     }
     // this is: selection sort 
     public void selectSort(){
@@ -67,17 +85,10 @@ public class SortTester
                 //numList.get(i) = smallerNumber;
             }
         }
+        printList();
     }
     // this prints out the final sorted list 
     public void printList(){
-
+        System.out.println(numList);
     }
-
-    //public void swap(ArrayList numList, int i, int j){
-        //temp = numList.get(i);
-        //numList.set(i,j);
-        //numList(j,temp);
-        //numList[i] = numList[j];
-        //numList[j] = temp;
-    //}
 }
