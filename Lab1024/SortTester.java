@@ -46,8 +46,8 @@ public class SortTester
             for(int j = 0; j < i; j++){
                 if(numList.get(j) > numList.get(j+1)){
                    temp = numList.get(j);
-                   numList.set(j,j+1);
-                   numList.set(j+1,temp);
+                   numList.set(numList.get(j),numList.get(j+1));
+                   numList.set(numList.get(j+1),temp);
                    //swap(numList, j, j+1); 
                 }
             }
@@ -61,8 +61,8 @@ public class SortTester
                 // Swapping Code +++++++++
                 if(numList.get(j) < numList.get(j-1)){
                     temp = numList.get(j);
-                    numList.set(j,j-1);
-                    numList.set(j-1,temp);
+                    numList.set(numList.get(j),numList.get(j-1));
+                    numList.set(numList.get(j-1),temp);
                     //numList.get(j) = numList.get(j-1);
                     //numList.get(j-1) = temp;
                 }
@@ -81,8 +81,8 @@ public class SortTester
                 }
                 // swapping code 
                 smallerNumber = numList.get(index);
-                numList.set(index, i);
-                numList.set(i,smallerNumber);
+                numList.set(index,numList.get(i));
+                numList.set(numList.get(i),smallerNumber);
                 //numList.get(index) = numList.get(i);
                 //numList.get(i) = smallerNumber;
             }
