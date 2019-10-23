@@ -18,6 +18,8 @@ public class SortTester
     int smallerNumber; 
     int pick;
     ArrayList<Integer> numList = new ArrayList<Integer>();
+    // just gonna note here that I haven't been able to get the code to work
+    // I did some research yesterday but nothing came up close to my issue
     public void loadNumbers(int n) {
         // load an ArrayList with n random numbers between 1 and 100 
         Random rand = new Random();
