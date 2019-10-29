@@ -11,27 +11,82 @@ import java.util.Scanner;
 
 public class StudentList
 {
+    
     // instance variables - replace the example below with your own
-    private int x;
-
+    String option;
+    String fullName;
+    String lastName;
+    int stuNumber;
     /**
      * Constructor for objects of class StudentList
      */
-    public StudentList()
+    public StudentList(String userOption)
     {
-        // initialise instance variables
-        x = 0;
+        option = userOption;
+        if(userOption == "1"){
+            addStudent(fullName);
+        }
+        else if(option == "2"){
+            deleteStudent(lastName);
+            deleteStudent(stuNumber);
+        }
+        else if(option == "3"){
+            editStudentList(lastName);
+            editStudentList(stuNumber);
+        }
+        else if(option == "4"){
+            clearList();
+        }
+        else if(option == "5"){
+            printList();
+        }
+        else if(option == "6"){
+            printStudent(lastName);
+            printStudent(stuNumber);
+        }
+        else if(option == "7"){
+            SortStudents(lastName);
+        }
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public void addStudent (String fullName){
+        System.out.println("1");
     }
+    
+    public void deleteStudent(String lastName){
+        System.out.println("2");
+    }
+    
+    public void deleteStudent(int stuNumber){
+        System.out.println("2");
+    }
+    
+    public void editStudentList(String lastName){
+        System.out.println("3");
+    }
+    
+    public void editStudentList(int stuNumber){
+        System.out.println("3");
+    }
+    
+    public void clearList(){
+        System.out.println("4");
+    }
+    
+    public void printList(){
+        System.out.println("5");
+    }
+    
+    public void printStudent(String lastName){
+        System.out.println("6");
+    }
+    
+    public void printStudent(int stuNumber){
+        System.out.println("6");
+    }
+    
+    public void SortStudents(String lastName){
+        System.out.println("7");
+    }
+    
 }
