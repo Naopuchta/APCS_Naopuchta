@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class StringCheckRunner
 {
+    
         public static void main(){
         Scanner kb = new Scanner(System.in);
         String inputStr = "";
