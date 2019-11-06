@@ -32,8 +32,10 @@ public class StudentListRunner
             inputStr = kb.nextLine();
 
             StudentList studentl = new StudentList(inputStr);
+
         }
         System.out.println("");
         System.out.println("You have quit my program.");
+        
     }
 }

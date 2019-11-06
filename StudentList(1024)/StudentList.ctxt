@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=StudentList
-comment1.params=userOption
+comment1.params=inputStr
 comment1.target=StudentList(java.lang.String)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ StudentList\r\n
 comment10.params=stuNumber
