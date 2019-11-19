@@ -25,8 +25,14 @@ public class StudentList
     int stuNumber;
     String actualInput;
 
+    // this is what I will be using to scan through the entire list 
+    int rows;
+    int cols;
+
     // for the while loops 
     int numbering;
+    // not sure if this is needed 
+    //String studentsList[][];
     /**
      * Constructor for objects of class StudentList
      */
@@ -34,6 +40,8 @@ public class StudentList
     {
         option = Integer.parseInt(inputStr);
         Scanner kb2 = new Scanner(System.in);
+        // this is creating the 2d matrix, should work 
+        String[][] studentsList = new String[5][5];
         if(option == 1){
             System.out.println("");
             System.out.println("You have chosen for me to input a student into the list..");
@@ -276,46 +284,74 @@ public class StudentList
     public void addStudent (String fullName){
         // here is where the code will split the first and last name (taken from
         // the previous student list project) 
+        
+        // PLACEHOLDER FOR WHERE THE NAME WILL BE PUT INTO THE LIST 
+        
+        
+        // so starting off I would have already made a matrix list (since that is what I am using here) 
+        // I first need to take all of the parameters and put them into the matrix list using a for loop
+        
+        // currently trying to think of a way to set up the matrix list and how to expand it 
+        
+        System.out.println("I have added your student to the list, enjoy.");
         System.out.println("1");
     }
 
     public void deleteStudent(String lastName){
+        // stuck here for som reason it says it cannot find this list even though I've created one
+        // this will be going however through the entire list to check to find the name
+        for(int i = 0; i > studentsList.length(); i++){
+            // this will check each first columb for the name 
+            if(studentList[i] == lastName){
+            
+            }
+        }
+        System.out.println("I have deleted the selected student.");
         System.out.println("2");
     }
 
     public void deleteStudent(int stuNumber){
+        System.out.println("I have deleted the selected student.");
         System.out.println("2");
     }
 
     public void editStudentList(String lastName){
+        System.out.println("You have completed editing the student list.");
         System.out.println("3");
     }
 
     public void editStudentList(int stuNumber){
+        System.out.println("You have completed editing the student list.");
         System.out.println("3");
     }
 
     public void clearList(){
+        System.out.println("I have cleared the entire list. It cannot be undone now.");
         System.out.println("4");
     }
 
     public void printList(){
+        System.out.println("I have printed the entire list for you..");
         System.out.println("5");
     }
 
     public void printStudentName(String lastName){
+        System.out.println("I have successfully printed the selected student's number.");
         System.out.println("6");
     }
 
     public void printStudentNumber(int stuNumber){
+        System.out.println("I have successfully printed the selected student.");
         System.out.println("6");
     }
 
     public void SortStudentsName(String lastName){
+        System.out.println("I have successfully sorted the list.");
         System.out.println("7");
     }
-    
+
     public void SortStudentsNumber(int stuNumber){
+        System.out.println("I have successfully sorted the list.");
         System.out.println("8");
     }
 
