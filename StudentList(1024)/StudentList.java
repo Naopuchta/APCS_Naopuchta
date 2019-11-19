@@ -21,8 +21,9 @@ public class StudentList
     String lastName;
     // will pick specific options back and forth for whether using a name or number (etc)
     int individualOpt;
-    // will be the assigned ID for 
+    // will be the assigned ID for when you're searching 
     int stuNumber;
+    // this will be the input 
     String actualInput;
 
     // this is what I will be using to scan through the entire list 
@@ -32,7 +33,14 @@ public class StudentList
     // for the while loops 
     int numbering;
     // not sure if this is needed 
-    //String studentsList[][];
+    //String studentsList[][];\
+    
+    // this will be the name List of the student list 
+    ArrayList<String> studentsList = new ArrayList<String>();
+    // this will be the gpa List of the student list 
+    ArrayList<String> studentsGpa = new ArrayList<String>();
+    // this will be the student number of the student list 
+    ArrayList<String> studentsNumber = new ArrayList<String>();
     /**
      * Constructor for objects of class StudentList
      */
@@ -40,8 +48,8 @@ public class StudentList
     {
         option = Integer.parseInt(inputStr);
         Scanner kb2 = new Scanner(System.in);
-        // this is creating the 2d matrix, should work 
-        String[][] studentsList = new String[5][5];
+        // this is creating the 2d matrix, should work (NO LONGER DOING 2D MATRIX)
+        //String[][] studentsList = new String[5][5];
         if(option == 1){
             System.out.println("");
             System.out.println("You have chosen for me to input a student into the list..");
@@ -300,9 +308,11 @@ public class StudentList
     public void deleteStudent(String lastName){
         // stuck here for som reason it says it cannot find this list even though I've created one
         // this will be going however through the entire list to check to find the name
-        for(int i = 0; i > studentsList.length(); i++){
-            // this will check each first columb for the name 
-            if(studentList[i] == lastName){
+        
+        // note that you are looking for the GPA, Students First Middle and last Name, and a student number 
+        for(int i = 0; i > studentsList.size(); i++){
+            // this will check each first column for the name 
+            if(studentsList.get(i) == lastName){
             
             }
         }
@@ -311,16 +321,36 @@ public class StudentList
     }
 
     public void deleteStudent(int stuNumber){
+        for(int i = 0; i > studentsList.size(); i++){
+            // this will check each first column for the name
+            // this must be parsed so that I can confirm the student's number 
+            if(Integer.parseInt(studentsList.get(i)) == stuNumber){
+            
+            }
+        }
         System.out.println("I have deleted the selected student.");
         System.out.println("2");
     }
 
     public void editStudentList(String lastName){
+        for(int i = 0; i > studentsList.size(); i++){
+            // this will check each first column for the name 
+            if(studentsList.get(i) == lastName){
+            
+            }
+        }
         System.out.println("You have completed editing the student list.");
         System.out.println("3");
     }
 
     public void editStudentList(int stuNumber){
+                for(int i = 0; i > studentsList.size(); i++){
+            // this will check each first column for the name
+            // this must be parsed so that I can confirm the student's number 
+            if(Integer.parseInt(studentsList.get(i)) == stuNumber){
+            
+            }
+        }
         System.out.println("You have completed editing the student list.");
         System.out.println("3");
     }
@@ -333,19 +363,44 @@ public class StudentList
     public void printList(){
         System.out.println("I have printed the entire list for you..");
         System.out.println("5");
+        // this will print out the entire list as it is (probably should find a way to make it less "messy")
+        // System.out.println(studentsList);
+        
+        // add a four loop for the entire list, there will be a format, possibly multiple arrayLists
+        // to make it easier when wanting to print things in a more neat manner
+        for(int i = 0; i > studentsList.size(); i++){
+        
+        }
     }
 
     public void printStudentName(String lastName){
+        for(int i = 0; i > studentsList.size(); i++){
+            // this will check each first column for the name 
+            if(studentsList.get(i) == lastName){
+            
+            }
+        }
         System.out.println("I have successfully printed the selected student's number.");
         System.out.println("6");
     }
 
     public void printStudentNumber(int stuNumber){
+                for(int i = 0; i > studentsList.size(); i++){
+            // this will check each first column for the name
+            // this must be parsed so that I can confirm the student's number 
+            if(Integer.parseInt(studentsList.get(i)) == stuNumber){
+            
+            }
+        }
         System.out.println("I have successfully printed the selected student.");
         System.out.println("6");
     }
 
     public void SortStudentsName(String lastName){
+        // not so sure how I am going to go about these two last ones 
+        // if not these two will unfortunately have to be left blank, as I don't have a clear
+        // solution on how to sort these lists properly0.00
+        
         System.out.println("I have successfully sorted the list.");
         System.out.println("7");
     }
