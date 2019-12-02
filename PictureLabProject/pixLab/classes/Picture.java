@@ -17,6 +17,8 @@ public class Picture extends SimplePicture
 {
   ///////////////////// constructors //////////////////////////////////
   
+  // This is for Activity 5: No the getPixels2d is not here 
+  
   /**
    * Constructor that takes no arguments 
    */

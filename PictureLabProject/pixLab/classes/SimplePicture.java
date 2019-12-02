@@ -347,6 +347,13 @@ public class SimplePicture implements DigitalPicture
   * Method to get a two-dimensional array of Pixels for this simple picture
   * @return a two-dimensional array of Pixel objects in row-major order.
   */
+ 
+ // Activity 5: Here is the method!! (2)
+ // 3. It would make a new Digital Picture?
+ // 4. It would make a new simple picture through the digital picture?
+ // 5. It would make a new simple picture in picture?
+ // 7. It would make a new picture through simplep picture
+ 
  public Pixel[][] getPixels2D()
  {
    int width = getWidth();
