@@ -109,21 +109,38 @@ public class IntArrayWorker
                 }
             }
         } 
+        // returning the count 
         return count;
     }
     // Activity 4: Exercise 2 
-    public void getLargest(int[][] largestList){
+    public int getLargest(){
         int largestInt = matrix[0][0]; 
-        for(int r = 0; r < matrix.length; r++){
-            for(int c = 0; c < matrix[r].length; c++){
-                if(matrix[r][c] < matrix[r][c+1]){
-                    
+        // this checks the row
+        for(int r = 1; r < matrix.length; r++){
+            // this checks the column
+
+            for(int c = 1; c < matrix[r].length; c++){
+                // if there is a larger number than what was set it will take the bigger number
+                if(largestInt < matrix[r][c]){
+                    largestInt = matrix[r][c];
                 }
             }
         }
+        // returning the largest value 
+        return largestInt;
     }
     // Activity 4: Exercise 3
-    public void getColTotal(){
-    
+    public int getColTotal(int column){
+        // this sets the sum to 0 so that it may add up the numbers
+        // column is the sum of the column you're looking for
+        int sum = 0;
+
+        for(int c = 0; c < matrix[column].length; c++){
+            // this adds up each value from the row 
+            sum = sum + matrix[column][c]; 
+        }
+
+        // returns the sum of the values 
+        return sum;
     }
 }
