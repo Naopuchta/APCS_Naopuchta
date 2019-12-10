@@ -25,9 +25,9 @@ public class PictureTester
     // Activity 5: Exercise 4 
     public static void testNegate(){
         Picture beach = new Picture("beach.jpg");
-        
+
     }
-    
+
     /** Method to test mirrorVertical */
     public static void testMirrorVertical()
     {
@@ -36,9 +36,9 @@ public class PictureTester
         caterpillar.mirrorVertical();
         caterpillar.explore();
     }
-    
+
     /** Method made for mirrorHorizontal*/
-    
+
     /** Method made for mirrorRightToLeft*/
     public static void testMirrorRightToLeft()
     {
@@ -47,6 +47,7 @@ public class PictureTester
         caterpillar.mirrorRightToLeft();
         caterpillar.explore();
     }
+
     /** Method to test mirrorTemple */
     public static void testMirrorTemple()
     {
@@ -54,6 +55,20 @@ public class PictureTester
         temple.explore();
         temple.mirrorTemple();
         temple.explore();
+    }
+    // Exercise 2 Activity 7 Tester 
+    public static void testMirrorArms(){
+        Picture snowman = new Picture("snowman.jpg");
+        snowman.explore();
+        snowman.mirrorArms();
+        snowman.explore();
+    }
+    // Exercise 3 Activity 7 Tester 
+    public static void testMirrorGull(){
+        Picture seagull = new Picture("seagull.jpg");
+        seagull.explore();
+        seagull.mirrorGull();
+        seagull.explore();
     }
 
     /** Method to test the collage method */
