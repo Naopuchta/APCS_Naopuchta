@@ -48,5 +48,37 @@ public class NestedLoops
                 System.out.print(num); 
             }
         }
+        // this is problem D
+        System.out.println("Here is D.");
+        System.out.println();
+        for(int i = 1; i <= 7; i++){
+            // finds the total number of dashes 
+            int totalDash = 8 - i; 
+            for(int j = 0; j <= totalDash; j++){
+                System.out.print("-");
+            }
+            // prints out i after the dashes 
+            System.out.print(i);
+            System.out.println();
+        }
+        // this is problem E 
+        // there are a total of 6 spaces in the first line 
+        for(int i = 1; i <= 7; i++){
+            int totalSpace = 7 - i; 
+            for(int j = 0; j <= totalSpace; j++){
+                System.out.print(" ");
+            }
+            for(int k = 1; k <= i; k++){
+                System.out.print("*");
+            }
+        }
+        // This is problem F
+        // the center piece has 13 stars 
+        // have to add by 2 every time 
+        for(int i = 1; i <= 13; i = i+2){
+            for(int j = 6; j <= 0; j = j = j - 2){
+            
+            }
+        }
     }
 }
