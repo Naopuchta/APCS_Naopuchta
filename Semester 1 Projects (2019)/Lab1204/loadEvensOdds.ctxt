@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=loadEvensOdds
+comment0.text=\r\n\ [][]\ Use\ your\ IntArrayWorker\ worker\ class\ and\ write\ the\ method\ that\ will..\ [][]\r\n\r\n-->\ loadEvensOdds\ will\ load\ the\ left\ side\ of\ the\ array\ with\ even\ numbers\ and\ odds\r\n\ \ \ \ \ \ \ \ \ \ on\ the\ right\ side.\ \r\n\r\n-->\ flipVertical\ will\ take\ the\ array\ and\ mirror\ the\ elements\ over\ a\ centerline.\ the\ result\r\n\ \ \ \ \ \ \ \ \ \ should\ be\ Odds\ on\ the\ left\ and\ Evens\ on\ the\ right.\ \r\n\r\n\r\n\ @author\ (Naomi\ Puchta)\r\n\ @version\ (12/04/19)\r\n
+comment1.params=
+comment1.target=loadEvensOdds()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ loadEvensOdds\r\n
+comment2.params=array
+comment2.target=void\ flipVertical(int[][])
+comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment3.params=left\ right\ select\ a
+comment3.target=void\ swap(int,\ int,\ int,\ int[][])
+numComments=4

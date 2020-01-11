@@ -137,9 +137,19 @@ public class Picture extends SimplePicture
             }
         }
     }
+    // challenge Exercise A5
+    public void fishScanner(){
+        Pixel[][] pixels = this.getPixels2D();
+        for(Pixel[] rowArray  : pixels){
+            for(Pixel pixelObj : rowArray){
+                pixelObj.setRed((pixelObj.getRed()-120)*3);
+                pixelObj.setGreen((pixelObj.getGreen()-120)*3);
+                pixelObj.setBlue((pixelObj.getBlue()-120)*3);
+            }
+        }
 
-    
-    
+    }
+
     /** Method that mirrors the picture around a 
      * vertical mirror in the center of the picture
      * from left to right */
@@ -159,7 +169,55 @@ public class Picture extends SimplePicture
             }
         } 
     }
-
+    // Exercise 1 (Activity 6)
+    public void mirrorRightToLeft(){
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        int width = pixels[0].length;
+        for (int row = 0; row < pixels.length; row++)
+        {
+            for (int col = 0; col < width/2; col++)
+            {
+                leftPixel = pixels[row][col];
+                rightPixel = pixels[row][(width/2)-col];
+                leftPixel.setColor(rightPixel.getColor());
+            }
+        }     
+    }
+    // Exercise 2 (Activity 6)
+    public void mirrorHorizontal(){
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel bottomPixel = null;
+        Pixel topPixel = null;
+        int width = pixels[0].length;
+        for (int row = 0; row < (pixels.length)/2; row++)
+        {
+            for (int col = 0; col < width; col++)
+            {
+                bottomPixel = pixels[row][col];
+                topPixel = pixels[(pixels.length)- row - 1][col];
+                bottomPixel.setColor(topPixel.getColor());
+            }
+        }  
+    }
+    // Exercise 3 (Activity 6)
+    public void mirrorHorizontalBotToTop(){
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel bottomPixel = null;
+        Pixel topPixel = null;
+        int width = pixels[0].length;
+        for (int row = 0; row < (pixels.length)/2; row++)
+        {
+            for (int col = 0; col < width; col++)
+            {
+                bottomPixel = pixels[row][col];
+                topPixel = pixels[(pixels.length)- row - 1][col];
+                topPixel.setColor(bottomPixel.getColor());
+            }
+        }      
+    }
+    // Exercise 1 (Activity 7) 
     /** Mirror just part of a picture of a temple */
     public void mirrorTemple()
     {
@@ -167,21 +225,59 @@ public class Picture extends SimplePicture
         Pixel leftPixel = null;
         Pixel rightPixel = null;
         int count = 0;
-        Pixel[][] pixels = this.getPixels2D();
-
+        Pixel[][] pixels = this.getPixels2D(); 
         // loop through the rows
         for (int row = 27; row < 97; row++)
         {
             // loop from 13 to just before the mirror point
             for (int col = 13; col < mirrorPoint; col++)
             {
-
+                count++;
                 leftPixel = pixels[row][col];      
                 rightPixel = pixels[row]                       
                 [mirrorPoint - col + mirrorPoint];
                 rightPixel.setColor(leftPixel.getColor());
             }
         }
+    }
+    // Exercise 2 (Activity 7)
+    public void mirrorArms(){
+        // end left arm 168
+        // start of right arm 240 
+        // another way is to just mirror the whole image so that the snowman is symmetrical 
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        int width = pixels[0].length;
+        for (int row = 0; row < 193; row++)
+        {
+            for (int col = 0; col < 168; col++)
+            {
+                leftPixel = pixels[row][col];
+                rightPixel = pixels[row][width - 1 - col];
+                rightPixel.setColor(leftPixel.getColor());
+            }
+        } 
+    }
+    // Exercise 3 (Activity 7) 
+    public void mirrorGull(){
+        // tail of bird 343     row 230 to 326
+        // head of the bird 238 
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        int width = pixels[0].length;
+        for (int row = 0; row < pixels.length; row++)
+        {
+            for (int col = 0; col < 343; col++)
+            {
+                if(343+col < pixels[0].length){
+                    leftPixel = pixels[row][col];
+                    rightPixel = pixels[row][343-col];  
+                    rightPixel.setColor(leftPixel.getColor());
+                }
+            }
+        } 
     }
 
     /** copy from the passed fromPic to the
