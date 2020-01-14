@@ -335,8 +335,12 @@ public class Picture extends SimplePicture
     {
         Pixel leftPixel = null;
         Pixel rightPixel = null;
+        // for ex 1 
+        Pixel bottomPixel = null;
         Pixel[][] pixels = this.getPixels2D();
         Color rightColor = null;
+        // for ex 1
+        Color bottomColor = null;
         for (int row = 0; row < pixels.length; row++)
         {
             for (int col = 0; 
@@ -344,12 +348,20 @@ public class Picture extends SimplePicture
             {
                 leftPixel = pixels[row][col];
                 rightPixel = pixels[row][col+1];
+                //bottomPixel = pixels[row][col];
                 rightColor = rightPixel.getColor();
+                //bottomColor = bottomPixel.getColor();
                 if (leftPixel.colorDistance(rightColor) > 
                 edgeDist)
                     leftPixel.setColor(Color.BLACK);
                 else
                     leftPixel.setColor(Color.WHITE);
+                //if(pixels.length > row+1){
+                //    if (bottomPixel.colorDistance(rightColor) > edgeDist)
+                //        bottomPixel.setColor(Color.BLACK);
+                //    else
+                //        bottomPixel.setColor(Color.WHITE); 
+                //}
             }
         }
     }
