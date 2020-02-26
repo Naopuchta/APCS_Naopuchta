@@ -13,13 +13,13 @@ public class BubbleSort
     /**
      * Constructor for objects of class BubbleSort
      */
-    public BubbleSort()
-    {
-        for(int i = 0; i < numberList.length(); i++){
-            for(int j = 0; j < i; j++){
-            
-            }
-        }
-    }
+    // public BubbleSort()
+    // {
+    //    for(int i = 0; i < numberList.length(); i++){
+    //        for(int j = 0; j < i; j++){
+    //        
+    //        }
+    //    }
+    //}
 
 }

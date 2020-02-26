@@ -93,4 +93,11 @@ public class SortTester
     public void printList(){
         System.out.println(numList);
     }
+    public static void mergeSort(int[] a, int n){
+        if(n < 2) {return;}
+    }
+    
+    public static void mege(int[] a, int[] l, int[] r, int left, int right){
+    
+    }
 }
